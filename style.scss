@@ -1,0 +1,170 @@
+// 변수 설정
+// $transition: all 5s linear;
+// ***** 함수 설정 *****
+// 중앙 정렬
+@mixin center($center: center) {
+  display: flex;
+  justify-content: $center;
+  align-items: center;
+}
+// section 내 각 도시별 이미지 설정
+@mixin showImg($height: 700px, $position: center center) {
+  height: $height;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: $position;
+  color: #fff;
+}
+
+// tranisition 3s 이거 해결하기 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+* {
+  font-family: "Jua", sans-serif;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+  body {
+    // header
+    header {
+      background-image: url("./img/la.jpg");
+      @include showImg($height: 600px);
+      position: relative;
+
+      nav {
+        width: 100%;
+
+        .nav-center {
+          background-color: transparent;
+
+          .nav-header {
+            // left:0, right:0 <=> width:100%
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &.show-nav-header {
+              background-color: tomato;
+              z-index: 1;
+            }
+
+            img {
+              width: 200px;
+              height: 100px;
+            }
+            button.nav-toggle {
+              width: 50px;
+              height: 50px;
+              @include center();
+              span {
+              }
+            }
+          }
+
+          .links-container {
+            height: 0;
+            background-color: transparent;
+            overflow: hidden;
+            @media (max-width: 700px) {
+              // 700px 이상일때
+              // position: absolute;
+              width: 100%;
+              height: auto !important;
+              background-color: tomato;
+              // transition: $transition;
+            }
+            // 토글 눌렀을 때 나타날 예정
+            &.show-links {
+            }
+            ul.links {
+              height: 200px;
+              li {
+                list-style-type: none;
+              }
+            }
+          }
+        }
+      }
+      // banner
+      .banner {
+        position: absolute;
+        top: 30%;
+        .container {
+          @include center();
+          flex-direction: column;
+        }
+      }
+    }
+
+    //london
+    section#london {
+      .title {
+        background-image: url("./img/london.jpg");
+        @include showImg();
+        @include center();
+      }
+    }
+    // new york
+    section#newyork {
+      .title {
+        background-image: url("./img/ny.jpg");
+        @include showImg($position: 0% 70%);
+        @include center();
+      }
+    }
+    // footer
+    footer {
+      @include center();
+      height: 60px;
+      p {
+      }
+    }
+    // tokyo
+    section#tokyo {
+      .title {
+        &.japan-slide {
+          @include showImg();
+          @include center();
+          width: 100%;
+
+          // display: none;
+          &#slide1 {
+            position: absolute;
+            background-image: url("./img/jp.jpg");
+          }
+          &#slide2 {
+            position: absolute;
+            background-image: url("./img/slide2.jpeg");
+            // @include showImg();
+          }
+          &#slide3 {
+            position: absolute;
+            background-image: url("./img/slide3.jpeg");
+            // @include showImg();
+          }
+        }
+      }
+      button span {
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+    .top-link {
+      visibility: hidden;
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      &.show-link {
+        visibility: visible;
+        color: red;
+        font-size: 40px;
+      }
+    }
+  }
+}

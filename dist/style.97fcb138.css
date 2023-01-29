@@ -1,0 +1,121 @@
+* {
+  font-family: "Jua", sans-serif; }
+
+a {
+  cursor: pointer;
+  text-decoration: none; }
+
+html {
+  scroll-behavior: smooth; }
+  html body header {
+    background-image: url("/la.4111c3ae.jpg");
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    position: relative; }
+    html body header nav {
+      width: 100%; }
+      html body header nav .nav-center {
+        background-color: transparent; }
+        html body header nav .nav-center .nav-header {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          html body header nav .nav-center .nav-header.show-nav-header {
+            background-color: tomato;
+            z-index: 1; }
+          html body header nav .nav-center .nav-header img {
+            width: 200px;
+            height: 100px; }
+          html body header nav .nav-center .nav-header button.nav-toggle {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+        html body header nav .nav-center .links-container {
+          height: 0;
+          background-color: transparent;
+          overflow: hidden; }
+          @media (max-width: 700px) {
+            html body header nav .nav-center .links-container {
+              width: 100%;
+              height: auto !important;
+              background-color: tomato; } }
+          html body header nav .nav-center .links-container ul.links {
+            height: 200px; }
+            html body header nav .nav-center .links-container ul.links li {
+              list-style-type: none; }
+    html body header .banner {
+      position: absolute;
+      top: 30%; }
+      html body header .banner .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+  html body section#london .title {
+    background-image: url("/london.d52aad26.jpg");
+    height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  html body section#newyork .title {
+    background-image: url("/ny.0d50ea14.jpg");
+    height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 70%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  html body footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; }
+  html body section#tokyo .title.japan-slide {
+    height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+    html body section#tokyo .title.japan-slide#slide1 {
+      position: absolute;
+      background-image: url("/jp.ead7ab28.jpg"); }
+    html body section#tokyo .title.japan-slide#slide2 {
+      position: absolute;
+      background-image: url("/slide2.ff84670b.jpeg"); }
+    html body section#tokyo .title.japan-slide#slide3 {
+      position: absolute;
+      background-image: url("/slide3.c0a30ede.jpeg"); }
+  html body section#tokyo button span {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1; }
+  html body .top-link {
+    visibility: hidden;
+    position: fixed;
+    right: 20px;
+    bottom: 20px; }
+    html body .top-link.show-link {
+      visibility: visible;
+      color: red;
+      font-size: 40px; }
+
+
+/*# sourceMappingURL=/style.97fcb138.css.map */
